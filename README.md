@@ -3,10 +3,9 @@
 ## Agent
 
 * Value-based
-    - [ ] DQN
-    - [ ] Double DQN
-    - [ ] Dueling DQN
-    - [ ] PER DQN
+    - [x] DQN
+    - [x] Double DQN
+    - [x] Dueling DQN
 
 * Policy-based
     - [x] REINFORCE

@@ -6,7 +6,7 @@ from agents import a_REGISTRY
 from utils.plot import *
 
 
-def train(env_name="gym", map_name="CartPole-v1", alg_name="ddpg"):
+def train(env_name="gym", map_name="CartPole-v1", alg_name="double_dqn"):
     env = e_REGISTRY[env_name](map_name)
     agent = a_REGISTRY[alg_name](env)
 
@@ -44,7 +44,7 @@ def train(env_name="gym", map_name="CartPole-v1", alg_name="ddpg"):
     env.close()
 
 
-def evaluate(env_name="gym", map_name="CartPole-v1", alg_name="ddpg"):
+def evaluate(env_name="gym", map_name="CartPole-v1", alg_name="double_dqn"):
     env = e_REGISTRY[env_name](map_name)
     agent = a_REGISTRY[alg_name](env)
 
@@ -75,8 +75,8 @@ def evaluate(env_name="gym", map_name="CartPole-v1", alg_name="ddpg"):
 
 if __name__ == '__main__':
     env_name = "gym"
-    map_name = "MountainCarContinuous-v0"
-    alg_name = "ddpg"
+    map_name = "CartPole-v1"
+    alg_name = "double_dqn"
 
     train(env_name, map_name, alg_name)
 
